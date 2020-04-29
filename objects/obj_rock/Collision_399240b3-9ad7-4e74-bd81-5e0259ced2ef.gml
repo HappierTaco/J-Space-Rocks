@@ -18,4 +18,10 @@ instance_destroy(other)
 repeat(10){
 	instance_create_layer(x,y,"Instances",obj_debris)
 }
-audio_play_sound(sound1,1,false)
+if sprite_index = spr_rock_3 {
+	audio_play_sound(sound1,1,false)
+} else if sprite_index = spr_rock_2 {
+	audio_play_sound(sound4,1,false)
+} else {
+	audio_play_sound(sound3,1,false)
+}
